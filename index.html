@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	
+
+</head>
+<body style="background-color: black">
+	<h1 style="color: yellow; display: none" class="popitki">попытки <span class="point">4</span></h1>
+	<button class="button" style="background-color: green">Спрятать</button>	
+		<div class="card1" style="background-image: url(img/1.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; top: 45%; left: 5%;"></div>
+		<div class="card2" style="background-image: url(img/5.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; left: 70%; top: 17%"></div>
+		<div class="col-4 card3" style="background-image: url(img/4.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; left: 38%; top: 65%"></div>
+		<div class="col-4 card4" style="background-image: url(img/falsh.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; left: 15%; top: 72%"></div>
+		<div class="col-4 card5" style="background-image: url(img/3.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; left: 15%; top: 12%"></div>
+		
+		<div class="col-4 card7" style="background-image: url(img/2.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; left: 42%; top: 6% "></div>
+		<div class="col-4 card8" style="background-image: url(img/6.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; left: 60%; top: 68% "></div>	
+			
+	<div class="vopros" ">
+		<h2 style="position: absolute; left: 35%; top: 45%; color: yellow; display: none" class="vopros1">Где спрятаны фальшивые монеты? <br>(десяти рублёвая и пяти рублёвая)</h2>
+		<p style="position: absolute; left: 45%; top: 45%; color: red; display: none ; font-size: 50px" class="win">YOU WIN</p>
+		<p style="position: absolute; left: 45%; top: 45%; color: red; display: none; font-size: 50px" class="lose">YOU LOSE </p>
+	</div> 
+	
+<script>
+	let point=3;
+		document.querySelector(".point").innerHTML = point;
+
+
+	document.querySelector(".button").onclick = function(){
+		document.querySelector(".card1").style.background = "red";
+		document.querySelector(".card2").style.background = "red";
+		document.querySelector(".card3").style.background = "red";
+		document.querySelector(".card4").style.background = "red";
+		document.querySelector(".card5").style.background = "red";
+		
+		document.querySelector(".card7").style.background = "red";
+		document.querySelector(".card8").style.background = "red";
+		document.querySelector(".vopros1").style.display = "block";
+		document.querySelector(".popitki").style.display = "block";
+
+		
+		document.querySelector(".card1").onclick = function(){
+			point=point-1;
+			document.querySelector(".point").innerHTML = point;
+			alert("Это же настоящая");
+			document.querySelector(".card1").style.background = "none";
+			document.querySelector(".card1").style.backgroundImage = "url(1.jpg)";
+			document.querySelector(".card1").style.backgroundImage = "block";
+			document.querySelector(".card1").style.backgroundSize = "100% 100%";
+			if (point == -1) {
+			document.querySelector(".card1").style.background = "none";
+			document.querySelector(".card1").style.backgroundImage = "url(1.jpg)";
+			document.querySelector(".card1").style.backgroundImage = "block";
+			document.querySelector(".card1").style.backgroundSize = "100% 100%";
+
+			document.querySelector(".card2").style.background = "none";
+			document.querySelector(".card2").style.backgroundImage = "url(5.jpg)";
+			document.querySelector(".card2").style.backgroundImage = "block";
+			document.querySelector(".card2").style.backgroundSize = "100% 100%";
+
+			document.querySelector(".card3").style.background = "none";
+			document.querySelector(".card3").style.backgroundImage = "url(4.jpg)";
+			document.querySelector(".card3").style.backgroundImage = "block";
+			document.querySelector(".card3").style.backgroundSize = "100% 100%";
+
+			document.querySelector(".card4").style.background = "none";
+			document.querySelector(".card4").style.backgroundImage = "url(falsh.jpg)";
+			document.querySelector(".card4").style.backgroundImage = "block";
+			document.querySelector(".card4").style.backgroundSize = "100% 100%";
+			document.querySelector(".card4").style.border ="1px solid green";
+
+			document.querySelector(".card5").style.background = "none";
+			document.querySelector(".card5").style.backgroundImage = "url(3.jpg)";
+			document.querySelector(".card5").style.backgroundImage = "block";
+			document.querySelector(".card5").style.backgroundSize = "100% 100%";
+
+			document.querySelector(".vopros1").style.display = "none";
+
+
+			document.querySelector(".card7").style.background = "none";
+			document.querySelector(".card7").style.backgroundImage = "url(2.jpg)";
+			document.querySelector(".card7").style.backgroundImage = "block";
+			document.querySelector(".card7").style.backgroundSize = "100% 100%";
+
+			document.querySelector(".card8").style.background = "none";
+			document.querySelector(".card8").style.backgroundImage = "url(6.jpg)";
+			document.querySelector(".card8").style.backgroundImage = "block";
+			document.querySelector(".card8").style.backgroundSize = "100% 100%";
+
+			document.querySelector(".point").style.display = "none";
+
+
+			document.querySelector(".lose").style.display = "block";
+
+
+
+			}
+			if (point == 0) {
+			document.querySelector(".card1").style.background = "none";
+			document.querySelector(".card1").style.backgroundImage = "url(1.jpg)";
+			document.querySelector(".card1").style.backgroundImage = "block";
+			document.querySelector(".card1").style.backgroundSize = "100% 100%";
+
+			document.querySelector(".card2").style.background = "none";
+			document.querySelector(".card2").style.backgroundImage = "url(5.jpg)";
+			document.querySelector(".card2").style.backgroundImage = "block";
+			document.querySelector(".card2").style.backgroundSize = "100% 100%";
+
+			document.querySelector(".card3").style.background = "none";
+			document.querySelector(".card3").style.backgroundImage = "url(4.jpg)";
+			document.querySelector(".card3").style.backgroundImage = "block";
+			document.querySelector(".card3").style.backgroundSize = "100% 100%";
+
+			document.querySelector(".card4").style.background = "none";
+			document.querySelector(".card4").style.backgroundImage = "url(falsh.jpg)";
+			document.querySelector(".card4").style.backgroundImage = "block";
+			document.querySelector(".card4").style.backgroundSize = "100% 100%";
+			document.querySelector(".card4").style.border ="1px solid green";
+
+			document.querySelector(".card5").style.background = "none";
+			document.querySelector(".card5").style.backgroundImage = "url(3.jpg)";
+			document.querySelector(".card5").style.backgroundImage = "block";
+			document.querySelector(".card5").style.backgroundSize = "100% 100%";
+document.querySelector(".lose").style.display = "block";
+			document.querySelector(".vopros1").style.display = "none";
+
+			document.querySelector(".card7").style.background = "none";
+			document.querySelector(".card7").style.backgroundImage = "url(2.jpg)";
+			document.querySelector(".card7").style.backgroundImage = "block";
+			document.querySelector(".card7").style.backgroundSize = "100% 100%";
+document.querySelector(".point").innerHTML = 0;
+			document.querySelector(".card8").style.background = "none";
+			document.querySelector(".card8").style.backgroundImage = "url(6.jpg)";
+			document.querySelector(".card8").style.backgroundImage = "block";
+			document.querySelector(".card8").style.backgroundSize = "100% 100%";
+			}
+
+
+			
+			
+		}
+
+
+		document.querySelector(".card2").onclick = function(){
+			point=point-1;
+			document.querySelector(".point").innerHTML = point;
+			alert("Это же настоящая");
+			document.querySelector(".card2").style.background = "none";
+			document.querySelector(".card2").style.backgroundImage = "url(5.jpg)";
+			document.querySelector(".card2").style.backgroundImage = "block";
+			document.querySelector(".card2").style.backgroundSize = "100% 100%";
+			if (point == -1) {
+			document.querySelector(".card1").style.background = "none";
+			document.querySelector(".card1").style.backgroundImage = "url(1.jpg)";
+			document.querySelector(".card1").style.backgroundImage = "block";
+			document.querySelector(".card1").style.backgroundSize = "100% 100%";
+document.querySelector(".vopros1").style.display = "none";
+			document.querySelector(".card2").style.background = "none";
+			document.querySelector(".card2").style.backgroundImage = "url(5.jpg)";
+			document.querySelector(".card2").style.backgroundImage = "block";
+			document.querySelector(".card2").style.backgroundSize = "100% 100%";
+
+			document.querySelector(".card3").style.background = "none";
+			document.querySelector(".card3").style.backgroundImage = "url(4.jpg)";
+			document.querySelector(".card3").style.backgroundImage = "block";
+			document.querySelector(".card3").style.backgroundSize = "100% 100%";
+
+			document.querySelector(".card4").style.background = "none";
+			document.querySelector(".card4").style.backgroundImage = "url(falsh.jpg)";
+			document.querySelector(".card4").style.backgroundImage = "block";
+			document.querySelector(".card4").style.backgroundSize = "100% 100%";
+			document.querySelector(".card4").style.border ="1px solid green";
+
+			document.querySelector(".card5").style.background = "none";
+			document.querySelector(".card5").style.backgroundImage = "url(3.jpg)";
+			document.querySelector(".card5").style.backgroundImage = "block";
+			document.querySelector(".card5").style.backgroundSize = "100% 100%";
+document.querySelector(".lose").style.display = "block";
+			document.querySelector(".card7").style.background = "none";
+			document.querySelector(".card7").style.backgroundImage = "url(2.jpg)";
+			document.querySelector(".card7").style.backgroundImage = "block";
+			document.querySelector(".card7").style.backgroundSize = "100% 100%";
+document.querySelector(".point").style.display = "none";
+			document.querySelector(".card8").style.background = "none";
+			document.querySelector(".card8").style.backgroundImage = "url(6.jpg)";
+			document.querySelector(".card8").style.backgroundImage = "block";
+			document.querySelector(".card8").style.backgroundSize = "100% 100%";
+			}
+			if (point == 0) {
+			document.querySelector(".card1").style.background = "none";
+			document.querySelector(".card1").style.backgroundImage = "url(1.jpg)";
+			document.querySelector(".card1").style.backgroundImage = "block";
+			document.querySelector(".card1").style.backgroundSize = "100% 100%";
+
+			document.querySelector(".card2").style.background = "none";
+			document.querySelector(".card2").style.backgroundImage = "url(5.jpg)";
+			document.querySelector(".card2").style.backgroundImage = "block";
+			document.querySelector(".card2").style.backgroundSize = "100% 100%";
+
+			document.querySelector(".card3").style.background = "none";
+			document.querySelector(".card3").style.backgroundImage = "url(4.jpg)";
+			document.querySelector(".card3").style.backgroundImage = "block";
+			document.querySelector(".card3").style.backgroundSize = "100% 100%";
+
+			document.querySelector(".card4").style.background = "none";
+			document.querySelector(".card4").style.backgroundImage = "url(falsh.jpg)";
+			document.querySelector(".card4").style.backgroundImage = "block";
+			document.querySelector(".card4").style.backgroundSize = "100% 100%";
+			document.querySelector(".card4").style.border ="1px solid green";
+
+			document.querySelector(".card5").style.background = "none";
+			document.querySelector(".card5").style.backgroundImage = "url(3.jpg)";
+			document.querySelector(".card5").style.backgroundImage = "block";
+			document.querySelector(".card5").style.backgroundSize = "100% 100%";
+document.querySelector(".lose").style.display = "block";
+			document.querySelector(".vopros1").style.display = "none";
+
+			document.querySelector(".card7").style.background = "none";
+			document.querySelector(".card7").style.backgroundImage = "url(2.jpg)";
+			document.querySelector(".card7").style.backgroundImage = "block";
+			document.querySelector(".card7").style.backgroundSize = "100% 100%";
+document.querySelector(".point").innerHTML = 0;
+			document.querySelector(".card8").style.background = "none";
+			document.querySelector(".card8").style.backgroundImage = "url(6.jpg)";
+			document.querySelector(".card8").style.backgroundImage = "block";
+			document.querySelector(".card8").style.backgroundSize = "100% 100%";
+			}
+		}
+
+
+
+		document.querySelector(".card3").onclick = function(){
+			point=point-1;
+			document.querySelector(".point").innerHTML = point;
+			alert("Это же настоящая");
+			document.querySelector(".card3").style.background = "none";
+			document.querySelector(".card3").style.backgroundImage = "url(4.jpg)";
+			document.querySelector(".card3").style.backgroundImage = "block";
+			document.querySelector(".card3").style.backgroundSize = "100% 100%";
+			if (point == -1) {
+			document.querySelector(".card1").style.background = "none";
+			document.querySelector(".card1").style.backgroundImage = "url(1.jpg)";
+			document.querySelector(".card1").style.backgroundImage = "block";
+			document.querySelector(".card1").style.backgroundSize = "100% 100%";
+
+			document.querySelector(".card2").style.background = "none";
+			document.querySelector(".card2").style.backgroundImage = "url(5.jpg)";
+			document.querySelector(".card2").style.backgroundImage = "block";
+			document.querySelector(".card2").style.backgroundSize = "100% 100%";
+
+			document.querySelector(".card3").style.background = "none";
+			document.querySelector(".card3").style.backgroundImage = "url(4.jpg)";
+			document.querySelector(".card3").style.backgroundImage = "block";
+			document.querySelector(".card3").style.backgroundSize = "100% 100%";
+document.querySelector(".lose").style.display = "block";
+			document.querySelector(".card4").style.background = "none";
+			document.querySelector(".card4").style.backgroundImage = "url(falsh.jpg)";
+			document.querySelector(".card4").style.backgroundImage = "block";
+			document.querySelector(".card4").style.backgroundSize = "100% 100%";
+			document.querySelector(".card4").style.border ="1px solid green";
+
+			document.querySelector(".card5").style.background = "none";
+			document.querySelector(".card5").style.backgroundImage = "url(3.jpg)";
+			document.querySelector(".card5").style.backgroundImage = "block";
+			document.querySelector(".card5").style.backgroundSize = "100% 100%";
+
+			document.querySelector(".vopros1").style.display = "none";
+
+			document.querySelector(".card7").style.background = "none";
+			document.querySelector(".card7").style.backgroundImage = "url(2.jpg)";
+			document.querySelector(".card7").style.backgroundImage = "block";
+			document.querySelector(".card7").style.backgroundSize = "100% 100%";
+document.querySelector(".point").innerHTML = 0;
+			document.querySelector(".card8").style.background = "none";
+			document.querySelector(".card8").style.backgroundImage = "url(6.jpg)";
+			document.querySelector(".card8").style.backgroundImage = "block";
+			document.querySelector(".card8").style.backgroundSize = "100% 100%";
+			}
+			if (point == 0) {
+			document.querySelector(".card1").style.background = "none";
+			document.querySelector(".card1").style.backgroundImage = "url(1.jpg)";
+			document.querySelector(".card1").style.backgroundImage = "block";
+			document.querySelector(".card1").style.backgroundSize = "100% 100%";
+
+			document.querySelector(".card2").style.background = "none";
+			document.querySelector(".card2").style.backgroundImage = "url(5.jpg)";
+			document.querySelector(".card2").style.backgroundImage = "block";
+			document.querySelector(".card2").style.backgroundSize = "100% 100%";
+
+			document.querySelector(".card3").style.background = "none";
+			document.querySelector(".card3").style.backgroundImage = "url(4.jpg)";
+			document.querySelector(".card3").style.backgroundImage = "block";
+			document.querySelector(".card3").style.backgroundSize = "100% 100%";
+
+			document.querySelector(".card4").style.background = "none";
+			document.querySelector(".card4").style.backgroundImage = "url(falsh.jpg)";
+			document.querySelector(".card4").style.backgroundImage = "block";
+			document.querySelector(".card4").style.backgroundSize = "100% 100%";
+			document.querySelector(".card4").style.border ="1px solid green";
+
+			document.querySelector(".card5").style.background = "none";
+			document.querySelector(".card5").style.backgroundImage = "url(3.jpg)";
+			document.querySelector(".card5").style.backgroundImage = "block";
+			document.querySelector(".card5").style.backgroundSize = "100% 100%";
+document.querySelector(".lose").style.display = "block";
+			document.querySelector(".vopros1").style.display = "none";
+
+			document.querySelector(".card7").style.background = "none";
+			document.querySelector(".card7").style.backgroundImage = "url(2.jpg)";
+			document.querySelector(".card7").style.backgroundImage = "block";
+			document.querySelector(".card7").style.backgroundSize = "100% 100%";
+document.querySelector(".point").innerHTML = 0;
+			document.querySelector(".card8").style.background = "none";
+			document.querySelector(".card8").style.backgroundImage = "url(6.jpg)";
+			document.querySelector(".card8").style.backgroundImage = "block";
+			document.querySelector(".card8").style.backgroundSize = "100% 100%";
+			}
+		}
+
+
+
+		document.querySelector(".card4").onclick = function(){
+			point=point-1;
+			document.querySelector(".point").innerHTML = point;
+			alert("Молодец, ты нашёл фальшивую пяти рублёвую монету:)");
+			document.querySelector(".card4").style.background = "none";
+			document.querySelector(".card4").style.backgroundImage = "url(falsh.jpg)";
+			document.querySelector(".card4").style.backgroundImage = "block";
+			document.querySelector(".card4").style.backgroundSize = "100% 100%";
+			document.querySelector(".card4").style.border ="1px solid green";
+			if (point == -1) {
+			document.querySelector(".card1").style.background = "none";
+			document.querySelector(".card1").style.backgroundImage = "url(1.jpg)";
+			document.querySelector(".card1").style.backgroundImage = "block";
+			document.querySelector(".card1").style.backgroundSize = "100% 100%";
+
+			document.querySelector(".card2").style.background = "none";
+			document.querySelector(".card2").style.backgroundImage = "url(5.jpg)";
+			document.querySelector(".card2").style.backgroundImage = "block";
+			document.querySelector(".card2").style.backgroundSize = "100% 100%";
+
+			document.querySelector(".card3").style.background = "none";
+			document.querySelector(".card3").style.backgroundImage = "url(4.jpg)";
+			document.querySelector(".card3").style.backgroundImage = "block";
+			document.querySelector(".card3").style.backgroundSize = "100% 100%";
+
+			document.querySelector(".card4").style.background = "none";
+			document.querySelector(".card4").style.backgroundImage = "url(falsh.jpg)";
+			document.querySelector(".card4").style.backgroundImage = "block";
+			document.querySelector(".card4").style.backgroundSize = "100% 100%";
+			document.querySelector(".card4").style.border ="1px solid green";
+document.querySelector(".lose").style.display = "block";
+			document.querySelector(".card5").style.background = "none";
+			document.querySelector(".card5").style.backgroundImage = "url(3.jpg)";
+			document.querySelector(".card5").style.backgroundImage = "block";
+			document.querySelector(".card5").style.backgroundSize = "100% 100%";
+document.querySelector(".vopros1").style.display = "none";
+			
+
+			document.querySelector(".card7").style.background = "none";
+			document.querySelector(".card7").style.backgroundImage = "url(2.jpg)";
+			document.querySelector(".card7").style.backgroundImage = "block";
+			document.querySelector(".card7").style.backgroundSize = "100% 100%";
+document.querySelector(".point").innerHTML = 0;
+			document.querySelector(".card8").style.background = "none";
+			document.querySelector(".card8").style.backgroundImage = "url(6.jpg)";
+			document.querySelector(".card8").style.backgroundImage = "block";
+			document.querySelector(".card8").style.backgroundSize = "100% 100%";
+			}
+			if (point ==2) {
+				document.querySelector(".card1").style.display = "none";
+				document.querySelector(".card2").style.display = "none";
+				document.querySelector(".card3").style.display = "none";
+				
+				document.querySelector(".card5").style.display = "none";
+				
+				document.querySelector(".card7").style.display = "none";
+				document.querySelector(".card8").style.display = "none";
+document.querySelector(".win").style.display = "block";
+document.querySelector(".vopros1").style.display = "none";
+document.querySelector(".point").style.display = "none";
+
+
+
+
+
+			}
+			if (point ==1) {
+				document.querySelector(".card1").style.display = "none";
+				document.querySelector(".card2").style.display = "none";
+				document.querySelector(".card3").style.display = "none";
+				
+				document.querySelector(".card5").style.display = "none";
+				
+				document.querySelector(".card7").style.display = "none";
+				document.querySelector(".card8").style.display = "none";
+document.querySelector(".win").style.display = "block";
+document.querySelector(".vopros1").style.display = "none";
+document.querySelector(".point").style.display = "none";
+			}
+			if (point == 0) {
+				document.querySelector(".card1").style.display = "none";
+				document.querySelector(".card2").style.display = "none";
+				document.querySelector(".card3").style.display = "none";
+				
+				document.querySelector(".card5").style.display = "none";
+				
+				document.querySelector(".card7").style.display = "none";
+				document.querySelector(".card8").style.display = "none";
+document.querySelector(".win").style.display = "block";
+document.querySelector(".vopros1").style.display = "none";
+document.querySelector(".point").style.display = "none";
+			}
+
+			
+		}
+
+
+
+		document.querySelector(".card5").onclick = function(){
+			point=point-1;
+			document.querySelector(".point").innerHTML = point;
+			alert("Это же настоящая");
+			document.querySelector(".card5").style.background = "none";
+			document.querySelector(".card5").style.backgroundImage = "url(3.jpg)";
+			document.querySelector(".card5").style.backgroundImage = "block";
+			document.querySelector(".card5").style.backgroundSize = "100% 100%";
+			if (point == -1) {
+			document.querySelector(".card1").style.background = "none";
+			document.querySelector(".card1").style.backgroundImage = "url(1.jpg)";
+			document.querySelector(".card1").style.backgroundImage = "block";
+			document.querySelector(".card1").style.backgroundSize = "100% 100%";
+
+			document.querySelector(".card2").style.background = "none";
+			document.querySelector(".card2").style.backgroundImage = "url(5.jpg)";
+			document.querySelector(".card2").style.backgroundImage = "block";
+			document.querySelector(".card2").style.backgroundSize = "100% 100%";
+
+			document.querySelector(".card3").style.background = "none";
+			document.querySelector(".card3").style.backgroundImage = "url(4.jpg)";
+			document.querySelector(".card3").style.backgroundImage = "block";
+			document.querySelector(".card3").style.backgroundSize = "100% 100%";
+
+			document.querySelector(".card4").style.background = "none";
+			document.querySelector(".card4").style.backgroundImage = "url(falsh.jpg)";
+			document.querySelector(".card4").style.backgroundImage = "block";
+			document.querySelector(".card4").style.backgroundSize = "100% 100%";
+			document.querySelector(".card4").style.border ="1px solid green";
+
+			document.querySelector(".card5").style.background = "none";
+			document.querySelector(".card5").style.backgroundImage = "url(3.jpg)";
+			document.querySelector(".card5").style.backgroundImage = "block";
+			document.querySelector(".card5").style.backgroundSize = "100% 100%";
+document.querySelector(".lose").style.display = "block";
+			document.querySelector(".vopros1").style.display = "none";
+
+			document.querySelector(".card7").style.background = "none";
+			document.querySelector(".card7").style.backgroundImage = "url(2.jpg)";
+			document.querySelector(".card7").style.backgroundImage = "block";
+			document.querySelector(".card7").style.backgroundSize = "100% 100%";
+document.querySelector(".point").innerHTML = 0;
+			document.querySelector(".card8").style.background = "none";
+			document.querySelector(".card8").style.backgroundImage = "url(6.jpg)";
+			document.querySelector(".card8").style.backgroundImage = "block";
+			document.querySelector(".card8").style.backgroundSize = "100% 100%";
+			}
+			if (point == 0) {
+			document.querySelector(".card1").style.background = "none";
+			document.querySelector(".card1").style.backgroundImage = "url(1.jpg)";
+			document.querySelector(".card1").style.backgroundImage = "block";
+			document.querySelector(".card1").style.backgroundSize = "100% 100%";
+
+			document.querySelector(".card2").style.background = "none";
+			document.querySelector(".card2").style.backgroundImage = "url(5.jpg)";
+			document.querySelector(".card2").style.backgroundImage = "block";
+			document.querySelector(".card2").style.backgroundSize = "100% 100%";
+
+			document.querySelector(".card3").style.background = "none";
+			document.querySelector(".card3").style.backgroundImage = "url(4.jpg)";
+			document.querySelector(".card3").style.backgroundImage = "block";
+			document.querySelector(".card3").style.backgroundSize = "100% 100%";
+
+			document.querySelector(".card4").style.background = "none";
+			document.querySelector(".card4").style.backgroundImage = "url(falsh.jpg)";
+			document.querySelector(".card4").style.backgroundImage = "block";
+			document.querySelector(".card4").style.backgroundSize = "100% 100%";
+			document.querySelector(".card4").style.border ="1px solid green";
+
+			document.querySelector(".card5").style.background = "none";
+			document.querySelector(".card5").style.backgroundImage = "url(3.jpg)";
+			document.querySelector(".card5").style.backgroundImage = "block";
+			document.querySelector(".card5").style.backgroundSize = "100% 100%";
+document.querySelector(".lose").style.display = "block";
+			document.querySelector(".vopros1").style.display = "none";
+
+			document.querySelector(".card7").style.background = "none";
+			document.querySelector(".card7").style.backgroundImage = "url(2.jpg)";
+			document.querySelector(".card7").style.backgroundImage = "block";
+			document.querySelector(".card7").style.backgroundSize = "100% 100%";
+document.querySelector(".point").innerHTML = 0;
+			document.querySelector(".card8").style.background = "none";
+			document.querySelector(".card8").style.backgroundImage = "url(6.jpg)";
+			document.querySelector(".card8").style.backgroundImage = "block";
+			document.querySelector(".card8").style.backgroundSize = "100% 100%";
+			}
+			
+		}
+
+
+
+
+
+
+
+
+		document.querySelector(".card7").onclick = function(){
+			point=point-1;
+			document.querySelector(".point").innerHTML = point;
+			alert("Это же настоящая");
+			document.querySelector(".card7").style.background = "none";
+			document.querySelector(".card7").style.backgroundImage = "url(2.jpg)";
+			document.querySelector(".card7").style.backgroundImage = "block";
+			document.querySelector(".card7").style.backgroundSize = "100% 100%";
+			if (point == -1) {
+			document.querySelector(".card1").style.background = "none";
+			document.querySelector(".card1").style.backgroundImage = "url(1.jpg)";
+			document.querySelector(".card1").style.backgroundImage = "block";
+			document.querySelector(".card1").style.backgroundSize = "100% 100%";
+
+			document.querySelector(".card2").style.background = "none";
+			document.querySelector(".card2").style.backgroundImage = "url(5.jpg)";
+			document.querySelector(".card2").style.backgroundImage = "block";
+			document.querySelector(".card2").style.backgroundSize = "100% 100%";
+
+			document.querySelector(".card3").style.background = "none";
+			document.querySelector(".card3").style.backgroundImage = "url(4.jpg)";
+			document.querySelector(".card3").style.backgroundImage = "block";
+			document.querySelector(".card3").style.backgroundSize = "100% 100%";
+
+			document.querySelector(".card4").style.background = "none";
+			document.querySelector(".card4").style.backgroundImage = "url(falsh.jpg)";
+			document.querySelector(".card4").style.backgroundImage = "block";
+			document.querySelector(".card4").style.backgroundSize = "100% 100%";
+			document.querySelector(".card4").style.border ="1px solid green";
+
+			document.querySelector(".card5").style.background = "none";
+			document.querySelector(".card5").style.backgroundImage = "url(3.jpg)";
+			document.querySelector(".card5").style.backgroundImage = "block";
+			document.querySelector(".card5").style.backgroundSize = "100% 100%";
+document.querySelector(".lose").style.display = "block";
+			
+document.querySelector(".vopros1").style.display = "none";
+			document.querySelector(".card7").style.background = "none";
+			document.querySelector(".card7").style.backgroundImage = "url(2.jpg)";
+			document.querySelector(".card7").style.backgroundImage = "block";
+			document.querySelector(".card7").style.backgroundSize = "100% 100%";
+document.querySelector(".point").innerHTML = 0;
+			document.querySelector(".card8").style.background = "none";
+			document.querySelector(".card8").style.backgroundImage = "url(6.jpg)";
+			document.querySelector(".card8").style.backgroundImage = "block";
+			document.querySelector(".card8").style.backgroundSize = "100% 100%";
+			}
+			if (point == 0) {
+			document.querySelector(".card1").style.background = "none";
+			document.querySelector(".card1").style.backgroundImage = "url(1.jpg)";
+			document.querySelector(".card1").style.backgroundImage = "block";
+			document.querySelector(".card1").style.backgroundSize = "100% 100%";
+
+			document.querySelector(".card2").style.background = "none";
+			document.querySelector(".card2").style.backgroundImage = "url(5.jpg)";
+			document.querySelector(".card2").style.backgroundImage = "block";
+			document.querySelector(".card2").style.backgroundSize = "100% 100%";
+
+			document.querySelector(".card3").style.background = "none";
+			document.querySelector(".card3").style.backgroundImage = "url(4.jpg)";
+			document.querySelector(".card3").style.backgroundImage = "block";
+			document.querySelector(".card3").style.backgroundSize = "100% 100%";
+
+			document.querySelector(".card4").style.background = "none";
+			document.querySelector(".card4").style.backgroundImage = "url(falsh.jpg)";
+			document.querySelector(".card4").style.backgroundImage = "block";
+			document.querySelector(".card4").style.backgroundSize = "100% 100%";
+			document.querySelector(".card4").style.border ="1px solid green";
+
+			document.querySelector(".card5").style.background = "none";
+			document.querySelector(".card5").style.backgroundImage = "url(3.jpg)";
+			document.querySelector(".card5").style.backgroundImage = "block";
+			document.querySelector(".card5").style.backgroundSize = "100% 100%";
+document.querySelector(".lose").style.display = "block";
+			document.querySelector(".vopros1").style.display = "none";
+
+			document.querySelector(".card7").style.background = "none";
+			document.querySelector(".card7").style.backgroundImage = "url(2.jpg)";
+			document.querySelector(".card7").style.backgroundImage = "block";
+			document.querySelector(".card7").style.backgroundSize = "100% 100%";
+document.querySelector(".point").innerHTML = 0;
+			document.querySelector(".card8").style.background = "none";
+			document.querySelector(".card8").style.backgroundImage = "url(6.jpg)";
+			document.querySelector(".card8").style.backgroundImage = "block";
+			document.querySelector(".card8").style.backgroundSize = "100% 100%";
+			}
+			
+		}
+
+
+
+
+		document.querySelector(".card8").onclick = function(){
+			point=point-1;
+			document.querySelector(".point").innerHTML = point;
+			alert("Это же настоящая");
+			document.querySelector(".card8").style.background = "none";
+			document.querySelector(".card8").style.backgroundImage = "url(6.jpg)";
+			document.querySelector(".card8").style.backgroundImage = "block";
+			document.querySelector(".card8").style.backgroundSize = "100% 100%";
+			if (point == -1) {
+			document.querySelector(".card1").style.background = "none";
+			document.querySelector(".card1").style.backgroundImage = "url(1.jpg)";
+			document.querySelector(".card1").style.backgroundImage = "block";
+			document.querySelector(".card1").style.backgroundSize = "100% 100%";
+
+			document.querySelector(".card2").style.background = "none";
+			document.querySelector(".card2").style.backgroundImage = "url(5.jpg)";
+			document.querySelector(".card2").style.backgroundImage = "block";
+			document.querySelector(".card2").style.backgroundSize = "100% 100%";
+
+			document.querySelector(".card3").style.background = "none";
+			document.querySelector(".card3").style.backgroundImage = "url(4.jpg)";
+			document.querySelector(".card3").style.backgroundImage = "block";
+			document.querySelector(".card3").style.backgroundSize = "100% 100%";
+
+			document.querySelector(".card4").style.background = "none";
+			document.querySelector(".card4").style.backgroundImage = "url(falsh.jpg)";
+			document.querySelector(".card4").style.backgroundImage = "block";
+			document.querySelector(".card4").style.backgroundSize = "100% 100%";
+			document.querySelector(".card4").style.border ="1px solid green";
+
+			document.querySelector(".card5").style.background = "none";
+			document.querySelector(".card5").style.backgroundImage = "url(3.jpg)";
+			document.querySelector(".card5").style.backgroundImage = "block";
+			document.querySelector(".card5").style.backgroundSize = "100% 100%";
+document.querySelector(".lose").style.display = "block";
+		document.querySelector(".vopros1").style.display = "none";
+
+			document.querySelector(".card7").style.background = "none";
+			document.querySelector(".card7").style.backgroundImage = "url(2.jpg)";
+			document.querySelector(".card7").style.backgroundImage = "block";
+			document.querySelector(".card7").style.backgroundSize = "100% 100%";
+document.querySelector(".point").innerHTML = 0;
+			document.querySelector(".card8").style.background = "none";
+			document.querySelector(".card8").style.backgroundImage = "url(6.jpg)";
+			document.querySelector(".card8").style.backgroundImage = "block";
+			document.querySelector(".card8").style.backgroundSize = "100% 100%";
+			}
+			if (point == 0) {
+			document.querySelector(".card1").style.background = "none";
+			document.querySelector(".card1").style.backgroundImage = "url(1.jpg)";
+			document.querySelector(".card1").style.backgroundImage = "block";
+			document.querySelector(".card1").style.backgroundSize = "100% 100%";
+
+			document.querySelector(".card2").style.background = "none";
+			document.querySelector(".card2").style.backgroundImage = "url(5.jpg)";
+			document.querySelector(".card2").style.backgroundImage = "block";
+			document.querySelector(".card2").style.backgroundSize = "100% 100%";
+
+			document.querySelector(".card3").style.background = "none";
+			document.querySelector(".card3").style.backgroundImage = "url(4.jpg)";
+			document.querySelector(".card3").style.backgroundImage = "block";
+			document.querySelector(".card3").style.backgroundSize = "100% 100%";
+
+			document.querySelector(".card4").style.background = "none";
+			document.querySelector(".card4").style.backgroundImage = "url(falsh.jpg)";
+			document.querySelector(".card4").style.backgroundImage = "block";
+			document.querySelector(".card4").style.backgroundSize = "100% 100%";
+			document.querySelector(".card4").style.border ="1px solid green";
+
+			document.querySelector(".card5").style.background = "none";
+			document.querySelector(".card5").style.backgroundImage = "url(3.jpg)";
+			document.querySelector(".card5").style.backgroundImage = "block";
+			document.querySelector(".card5").style.backgroundSize = "100% 100%";
+document.querySelector(".lose").style.display = "block";
+			document.querySelector(".vopros1").style.display = "none";
+
+			document.querySelector(".card7").style.background = "none";
+			document.querySelector(".card7").style.backgroundImage = "url(2.jpg)";
+			document.querySelector(".card7").style.backgroundImage = "block";
+			document.querySelector(".card7").style.backgroundSize = "100% 100%";
+document.querySelector(".point").innerHTML = 0;
+			document.querySelector(".card8").style.background = "none";
+			document.querySelector(".card8").style.backgroundImage = "url(6.jpg)";
+			document.querySelector(".card8").style.backgroundImage = "block";
+			document.querySelector(".card8").style.backgroundSize = "100% 100%";
+			}
+		}
+
+
+
+
+
+	}
+	
+
+
+
+
+</script>	
+</body>
+</html>
